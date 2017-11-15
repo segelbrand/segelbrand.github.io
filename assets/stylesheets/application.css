@@ -1,0 +1,102 @@
+* {
+  font-family: Tahoma, Arial;
+}
+
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #7E7366;
+}
+
+header {
+  width: 100%;
+  height: 600px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+  .sb-header-cover {
+    position: aboslute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    opacity: 0.95;
+    background-image: url("../images/cover.jpg");
+    background-position: left bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .sb-header-logo {
+    display: block;
+    width: auto;
+    height: 80%;
+    margin: 10% auto;
+  }
+
+    .sb-header-logo img {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+.sb-wrapper {
+
+}
+
+  .sb-wrapper-spacer {
+    width: 100%;
+    height: 6px;
+    background: #272018
+  }
+
+footer {
+  width: 100%;
+  height: 15px;
+  margin: 50px 0 0 0;
+  padding: 8px 0;
+  background: #38332E;
+  border-top: 1px solid #333333;
+  text-align: center;
+}
+
+  .sb-footer-info {
+    font-size: 0.6em;
+    text-transform: uppercase;
+    color: #AAAAAA;
+  }
+/*
+    <header class="sb-header">
+
+    </header>
+    <div class="sb-wrapper">
+      <div class="sb-wrapper-spacer"></div>
+      <div class="sb-wrapper-inner">
+        <nav class="sb-navigation">
+
+        </nav>
+        <div class="sb-content">
+          <section class="sb-home-text">
+
+          </section>
+          <section class="sb-home-pictures">
+
+          </section>
+        </div>
+      </div>
+    </div>
+    <footer class="sb-footer">
+
+    </footer>
+*/
