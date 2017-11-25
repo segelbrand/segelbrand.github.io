@@ -174,6 +174,7 @@ footer {
   margin: 80px 0 10px 50px;
   text-align: left;
 }
+
   .sb-footer-info {
     display: inline-block;
     margin: 0;
@@ -186,3 +187,64 @@ footer {
   }
 
     #year { font-style: normal; }
+
+
+@media (max-width: 1200px) {
+  .sb-content-wrapper-inner {
+    width: 90%;
+  }
+}
+
+@media (max-width: 767px) {
+  .sb-content-wrapper-inner {
+    display: block;
+    width: 96%;
+    margin: 30px auto 0 auto;
+    padding: 0;
+  }
+
+    .sb-content-sidebar {
+      width: 100%;
+      text-align: center;
+    }
+
+      .sb-content-logo {
+        width: 80%;
+        margin: 0 auto;
+      }
+
+      .sb-content-nav {
+        display: none;
+      }
+
+    .sb-content-main {
+      width: 100%;
+    }
+
+      .sb-content-inner {
+        margin: 15px 0 0 0;
+        padding: 0 3%;
+      }
+
+        .sb-content-headline {
+          margin-top: 50px !important;
+        }
+
+        .sb-picture-item {
+          width: 50%;
+        }
+
+    footer {
+      width: 94%;
+      margin: 30px 0 10px 0;
+      padding: 0 3%;
+      text-align: center;
+    }
+
+      .sb-footer-info {
+        display: inline-block;
+        margin: 0;
+        padding: 4px 15px 0 15px;
+      }
+
+}
