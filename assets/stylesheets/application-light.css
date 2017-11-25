@@ -1,0 +1,32 @@
+* {
+  font-family: Tahoma, Arial;
+  font-weight: normal;
+  font-size: 1em;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+footer {
+  width: 100%;
+  height: auto;
+  margin: 20px 0 10px 0;
+  text-align: center;
+}
+  .sb-footer-info {
+    display: inline-block;
+    margin: 0;
+    padding: 4px 15px 0 15px;
+    border-top: 1px dotted #DDD;
+    font-size: 0.7em;
+    font-weight: normal;
+    text-transform: uppercase;
+    color: #DDD;
+  }
+
+    #year { font-style: normal; }
