@@ -8,25 +8,144 @@ html,
 body {
   margin: 0;
   padding: 0;
+  background: #FEFEFE;
 }
 
+.sb-content-wrapper {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+}
 
+  .sb-content-wrapper-inner {
+    display: flex;
+    width: 80%;
+    max-width: 1000px;
+    margin: 50px auto 0 auto;
+    padding: 0;
+  }
+
+    .sb-content-sidebar {
+      display: block;
+      flex-direction: row;
+      width: 250px;
+    }
+
+      .sb-content-logo {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+
+        .sb-logo-img {
+          width: 100%;
+          height: auto;
+        }
+
+      .sb-content-nav {
+        margin: 0;
+        padding: 50px 0 0 0;
+      }
+
+        .sb-content-nav ul {
+          margin: 0;
+          padding: 0;
+          list-style-type: none;
+          text-align: right;
+        }
+
+          .sb-content-nav ul li {
+            margin: 0 0 10px 0;
+            padding: 0;
+          }
+
+          .sb-content-nav ul li a {
+            color: #666666;
+            font-size: 1.4em;
+            line-height: 1.4em;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+          }
+
+          .sb-content-nav ul li a::after {
+            content: "/";
+            display: inline-block;
+            margin: 0;
+            padding: 0 0 0 15px;
+            font-size: 1.4em;
+            font-weight: bold;
+            color: #DEDEDE;
+            transition: color 0.3s ease-in-out;
+          }
+
+          .sb-content-nav ul li a:hover {
+            color: #172D42
+          }
+
+          .sb-content-nav ul li a:hover::after {
+            color: #172D42
+          }
+
+          .sb-content-nav ul li a.active::after {
+            color: #0A1C2D;
+          }
+
+    .sb-content-main {
+      display: block;
+      flex-direction: row;
+      width: calc(100% - 250px);
+    }
+
+      .sb-content-inner {
+        margin: 0;
+        padding: 0 0 0 50px;
+      }
+
+        .sb-content-headline {
+          margin-top: 0;
+          font-size: 1.6em;
+          font-weight: normal;
+          text-transform: uppercase;
+          border-bottom: 1px dotted #DDDDDD;
+          color: #444;
+        }
+
+          .sb-content-headline::before {
+            content: "// ";
+            display: inline-block;
+            padding: 0 15px 0 0;
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #0A1C2D;
+          }
+
+          .sb-spaced-headline { margin-top: 100px; }
+          .sb-spaced-headline::before {
+            content: "";
+            padding: 0;
+          }
+        
+        .content-block {
+          text-align: justify;
+        }
 
 footer {
   width: 100%;
   height: auto;
-  margin: 20px 0 10px 0;
-  text-align: center;
+  margin: 80px 0 10px 50px;
+  text-align: left;
 }
   .sb-footer-info {
     display: inline-block;
     margin: 0;
-    padding: 4px 15px 0 15px;
+    padding: 4px 50px 0 0;
     border-top: 1px dotted #DDD;
     font-size: 0.7em;
     font-weight: normal;
     text-transform: uppercase;
-    color: #DDD;
+    color: #BBB;
   }
 
     #year { font-style: normal; }
