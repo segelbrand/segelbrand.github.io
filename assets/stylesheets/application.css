@@ -4,6 +4,16 @@
   font-size: 1em;
 }
 
+a {
+  color: #000000;
+  text-decoration: none;
+  border-bottom: 1px dotted #333333;
+}
+
+  a:hover {
+    border-bottom: 1px solid #333333;
+  }
+
 html,
 body {
   margin: 0;
@@ -19,14 +29,15 @@ body {
   width: 100%;
   height: auto;
   margin: 0;
-  padding: 0;
+  padding: 50px 0 0 0;
+  background: rgba(255, 255, 255, .2);
 }
 
   .sb-content-wrapper-inner {
     display: flex;
     width: 80%;
     max-width: 1000px;
-    margin: 50px auto 0 auto;
+    margin: 0 auto;
     padding: 0;
   }
 
@@ -65,7 +76,8 @@ body {
           }
 
           .sb-content-nav ul li a {
-            color: #666666;
+            border-bottom: none;
+            color: #444444;
             font-size: 1.4em;
             line-height: 1.4em;
             text-transform: uppercase;
@@ -80,7 +92,7 @@ body {
             padding: 0 0 0 15px;
             font-size: 1.4em;
             font-weight: bold;
-            color: #DEDEDE;
+            color: #ABABAB;
             transition: color 0.2s ease-in-out;
           }
 
@@ -153,7 +165,12 @@ body {
           .sb-picture-item {
             flex-direction: row;
             width: 25%;
+            margin-bottom: 10px;
           }
+
+            .sb-picture-item a {
+              border-bottom: none;
+            }
 
           .sb-picture-item-big {
             flex-direction: row;
