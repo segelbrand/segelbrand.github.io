@@ -14,7 +14,8 @@ a {
     border-bottom: 1px solid #333333;
   }
 
-  #lightbox a{
+  .sb-picture-item-big a
+  #lightbox a {
     border-bottom: none;
   }
 
