@@ -157,7 +157,11 @@ body {
 
           .sb-picture-item-big {
             flex-direction: row;
-            width: 75%;
+            width: 100%;
+          }
+
+          .sb-picture-item-big .sb-picture-img {
+            opacity: 1;
           }
 
             .sb-picture-item:nth-child(4 + 1) {
