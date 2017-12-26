@@ -13,3 +13,8 @@ for (var i = 0; i < acrticles.length; i++) {
 // copyright year
 var date = document.getElementById('year');
 date.innerText = new Date().getFullYear();
+
+// gallery
+lightbox.option({
+    albumLabel: 'Bild %1 von %2'
+})
