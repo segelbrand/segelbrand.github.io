@@ -9,6 +9,10 @@ body {
   margin: 0;
   padding: 0;
   background: #FEFEFE;
+  background-image: url('../images/beer_background.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top; 
 }
 
 .sb-content-wrapper {
@@ -183,7 +187,7 @@ footer {
     font-size: 0.7em;
     font-weight: normal;
     text-transform: uppercase;
-    color: #BBB;
+    color: black;
   }
 
     #year { font-style: normal; }
