@@ -23,11 +23,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  background: #FEFEFE;
-  background-image: url('../images/beer_background.jpg');
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top; 
 }
 
 .sb-content-wrapper {
