@@ -152,6 +152,35 @@ body {
           font-size: 1.1em;
         }
 
+        .sb-picture-select {
+          display: flex;
+          flex-wrap: nowrap;
+          width: 100%;
+          max-width: 100%;
+          height: auto;
+          margin: 20px 0;
+          padding 0;
+        }
+
+          .sb-picture-select-group {
+            flex-direction: row;
+            width: 75%;
+          }
+
+          .sb-picture-year {
+            flex-direction: row;
+            width: 24%;
+          }
+
+          .sb-picture-year-link {
+            display: block;
+            margin: 0 0 10px 0;
+          }
+
+          .sb-picture-year-link.active {
+            font-weight: bold;
+          }
+
         .sb-picture-collection {
           display: flex;
           flex-wrap: wrap;
