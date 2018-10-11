@@ -210,7 +210,7 @@ body {
               padding: 0.9em;
               margin: 0 0 5px 0;
               transition: all 0.2s ease-in-out;
-              width: 50%;
+              width: 100%;
             }
 
               textarea {
@@ -228,13 +228,27 @@ body {
               padding: 0.6em 0.9em;
               transition: all 0.2s ease-in-out;
               cursor: pointer;
-              width: 50%;
+              width: 100%;
             }
 
               button:hover, a.button:hover {
                 border: 1px solid #0A1C2D;
                 background: rgba(0, 0, 0, .1);
               }
+
+  .sb-contact-wrapper {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+  }
+
+    .sb-contact-side {
+      flex-direction: row;
+      width: 50%;
+    }
 
 footer {
   width: 100%;
@@ -305,6 +319,14 @@ footer {
         input, textarea, button, a.button {
           width: 100%;
         }
+
+    .sb-contact-wrapper {
+      display: block;
+    }
+
+      .sb-contact-side {
+        width: 100%;
+      }
 
     footer {
       width: 94%;
