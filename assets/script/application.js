@@ -11,7 +11,7 @@ for (var i = 0; i < acrticles.length; i++) {
 }
 
 // gallery years
-$('.sb-picture-year-link').click(function() {
+$('.sb-picture-year-link').click(function(e) {
   var year = $(this).text().trim();
 
   $('.sb-picture-year-link').removeClass('active');
@@ -34,6 +34,8 @@ $('.sb-picture-year-link').click(function() {
       $(image).animate({ opacity: 1 }, 200);
     });
   });
+  
+  e.preventDefault();
 });
 
 // gallery
