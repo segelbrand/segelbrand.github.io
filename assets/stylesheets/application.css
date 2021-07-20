@@ -371,3 +371,13 @@ footer {
       }
 
 }
+
+.price-table,
+.price-table tr,
+.price-table tr td {
+  border: 0;
+}
+
+  .price-table td:first-child {
+    padding-right: 50px;
+  }
