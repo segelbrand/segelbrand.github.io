@@ -204,7 +204,22 @@ body {
           .sb-picture-item-big {
             flex-direction: row;
             width: 100%;
+            position: relative;
           }
+
+            .sb-picture-item-big::after{
+              content: '';
+              clear: both;
+              
+            }
+
+            #ytembed,
+            #gpfull {
+              position: relative;
+              float: left;
+              margin-top: 0;
+              margin-left: 0;
+            }
 
           .sb-picture-item-big .sb-picture-img {
             opacity: 1;
