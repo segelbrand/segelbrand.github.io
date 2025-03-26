@@ -1,81 +1,90 @@
 // youtube video links
-var YT_LINKS = {
-  '2022': 'https://www.youtube.com/embed/VrgLB4SgrO4'
+const YT_LINKS = {
+  2022: "https://www.youtube.com/embed/VrgLB4SgrO4",
 };
 
-// menu
-var menu = document.getElementById('menu');
-var acrticles = document.getElementsByClassName('sb-content-headline');
-for (var i = 0; i < acrticles.length; i++) {
-  var a = document.createElement('a');
-  a.href = '#' + acrticles[i].id;
-  a.innerText = i === 0 ? 'Home' : acrticles[i].innerText;
-  var li = document.createElement('li');
-  li.appendChild(a);
-  menu.appendChild(li);
+// helper: animate opacity
+function animateOpacity(el, targetOpacity, duration, callback) {
+  el.style.transition = `opacity ${duration}ms`;
+  el.style.opacity = targetOpacity;
+  if (callback) {
+    setTimeout(callback, duration);
+  }
 }
 
 // gallery years
-$('.sb-picture-year-link').click(function (e) {
-  var year = $(this).text().trim();
+document.querySelectorAll(".sb-picture-year-link").forEach((link) => {
+  link.addEventListener("click", function (e) {
+    const year = this.textContent.trim();
 
-  if (Object.keys(YT_LINKS).indexOf(year + "") !== -1) {
-    $('#gpfull').animate({ opacity: 0 }, 200, () => {
-      $('#gpfull').hide();
-      $('#ytembed').show();
-      $('#ytembed').animate({ opacity: 1 }, 200);
+    const ytembed = document.getElementById("ytembed");
+    const gpfull = document.getElementById("gpfull");
+    const gpthumb = document.getElementById("gpthumb");
+
+    if (YT_LINKS.hasOwnProperty(year)) {
+      animateOpacity(gpfull, 0, 200, () => {
+        gpfull.style.display = "none";
+        ytembed.style.display = "block";
+        animateOpacity(ytembed, 1, 200);
+      });
+    } else {
+      animateOpacity(ytembed, 0, 200, () => {
+        ytembed.style.display = "none";
+        gpfull.style.display = "block";
+        animateOpacity(gpfull, 1, 200);
+      });
+    }
+
+    document
+      .querySelectorAll(".sb-picture-year-link")
+      .forEach((l) => l.classList.remove("active"));
+    this.classList.add("active");
+
+    animateOpacity(ytembed, 0, 200, () => {
+      ytembed.setAttribute("src", YT_LINKS[year]);
+      animateOpacity(ytembed, 1, 200);
     });
-  } else {
-    $('#ytembed').animate({ opacity: 0 }, 200, () => {
-      $('#ytembed').hide();
-      $('#gpfull').show();
-      $('#gpfull').animate({ opacity: 1 }, 200);
+
+    animateOpacity(gpfull, 0, 200, () => {
+      gpfull.setAttribute("href", `assets/images/${year}/group.jpg`);
+      gpthumb.setAttribute("src", `assets/images/${year}/group.thumb.jpg`);
+      animateOpacity(gpfull, 1, 200);
     });
-  }
 
-  $('.sb-picture-year-link').removeClass('active');
-  $(this).addClass('active');
+    document.querySelectorAll(".sb-picture-item").forEach((pic, i) => {
+      const image = pic.querySelector(".sb-pic-link");
+      const thumb = pic.querySelector(".sb-picture-img");
+      const picnr = String(i + 1).padStart(2, "0");
 
-  $('#ytembed').animate({ opacity: 0 }, 200, function () {
-    $('#ytembed').attr('src', YT_LINKS[year]);
-    $('#ytembed').animate({ opacity: 1 }, 200);
-  });
-
-  $('#gpfull').animate({ opacity: 0 }, 200, function () {
-    $('#gpfull').attr('href', 'assets/images/' + year + '/group.jpg');
-    $('#gpthumb').attr('src', 'assets/images/' + year + '/group.thumb.jpg');
-    $('#gpfull').animate({ opacity: 1 }, 200);
-  });
-
-  $('.sb-picture-item').each(function (i, pic) {
-    var image = $(this).find('.sb-pic-link')[0];
-    var thumb = $(this).find('.sb-picture-img')[0];
-    var picnr = String(i + 1).padStart(2, '0');
-
-    $(image).animate({ opacity: 0 }, 200, function () {
-      $(image).attr('href', 'assets/images/' + year + '/' + picnr + '.jpg');
-      $(thumb).attr('src', 'assets/images/' + year + '/' + picnr + '.thumb.jpg');
-      $(image).animate({ opacity: 1 }, 200);
+      animateOpacity(image, 0, 200, () => {
+        image.setAttribute("href", `assets/images/${year}/${picnr}.jpg`);
+        thumb.setAttribute("src", `assets/images/${year}/${picnr}.thumb.jpg`);
+        animateOpacity(image, 1, 200);
+      });
     });
-  });
 
-  e.preventDefault();
+    e.preventDefault();
+  });
 });
 
-// gallery
-lightbox.option({
-  albumLabel: 'Bild %1 von %2'
-})
+// gallery lightbox option
+if (typeof lightbox !== "undefined") {
+  lightbox.option({
+    albumLabel: "Bild %1 von %2",
+  });
+}
 
 // youtube
 function resizeYtFrame() {
-  var width = $('#yt-wrapper').width() * 0.99;
-  $('#ytembed').width(width);
-  $('#ytembed').height(width * 0.5625);
+  const wrapper = document.getElementById("yt-wrapper");
+  const ytembed = document.getElementById("ytembed");
+  const width = wrapper.offsetWidth * 0.99;
+  ytembed.style.width = `${width}px`;
+  ytembed.style.height = `${width * 0.5625}px`;
 }
-$(window).resize(resizeYtFrame);
+window.addEventListener("resize", resizeYtFrame);
 resizeYtFrame();
 
 // copyright year
-var date = document.getElementById('year');
+const date = document.getElementById("year");
 date.innerText = new Date().getFullYear();

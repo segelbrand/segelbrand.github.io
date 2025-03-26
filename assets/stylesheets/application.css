@@ -85,17 +85,6 @@ body {
             transition: color 0.2s ease-in-out;
           }
 
-          .sb-content-nav ul li a::after {
-            content: "/";
-            display: inline-block;
-            margin: 0;
-            padding: 0 0 0 15px;
-            font-size: 1.4em;
-            font-weight: bold;
-            color: #ABABAB;
-            transition: color 0.2s ease-in-out;
-          }
-
           .sb-content-nav ul li a:hover {
             color: #172D42
           }
@@ -121,21 +110,12 @@ body {
 
         .sb-content-headline {
           margin-top: 0;
-          font-size: 1.6em;
+          font-size: 1.8em;
           font-weight: normal;
           text-transform: uppercase;
           border-bottom: 1px dotted #DDDDDD;
           color: #444;
         }
-
-          .sb-content-headline::before {
-            content: "// ";
-            display: inline-block;
-            padding: 0 15px 0 0;
-            font-size: 1.5em;
-            font-weight: bold;
-            color: #0A1C2D;
-          }
 
           h2 {
             font-weight: bold;
@@ -175,6 +155,7 @@ body {
           .sb-picture-year-link {
             display: block;
             margin: 0 0 10px 0;
+            text-align: right;
           }
 
           .sb-picture-year-link.active {
