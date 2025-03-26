@@ -60,6 +60,7 @@ document.querySelectorAll(".sb-picture-year-link").forEach((link) => {
         image.setAttribute("href", `assets/images/${year}/${picnr}.jpg`);
         thumb.setAttribute("src", `assets/images/${year}/${picnr}.thumb.jpg`);
         animateOpacity(image, 1, 200);
+        refreshFsLightbox();
       });
     });
 
