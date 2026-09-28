@@ -248,19 +248,22 @@ body {
             button, a.button {
               font-size: 1em;
               font-weight: 600;
-              border: 1px solid #999999;
-              color: #0A1C2D;
-              background: transparent;
+              border: 1px solid #0A1C2D;
+              color: #fff;
+              background: #0A1C2D;
               line-height: 1em;
-              padding: 0.6em 0.9em;
+              padding: 0.8em 1.2em;
               transition: all 0.2s ease-in-out;
               cursor: pointer;
               width: 100%;
             }
 
               button:hover, a.button:hover {
-                border: 1px solid #0A1C2D;
-                background: rgba(0, 0, 0, .1);
+                background: #172D42;
+              }
+
+              button:active {
+                transform: translateY(1px);
               }
 
   .sb-contact-wrapper {
